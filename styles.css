@@ -1,0 +1,70 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.about, .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para telas maiores que 1024px */
+@media screen and (min-width: 1024px) {
+    .about {
+        background-color: #f5f5f5;
+    }
+    .about-image, .about-text {
+        flex: 1;
+        padding: 20px;
+    }
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .products {
+        background-color: #fff;
+    }
+    .product {
+        flex: 1;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+}
+
+/* Estilos para telas entre 641px e 1023px (Tablet) */
+@media screen and (max-width: 1023px) {
+    .about, .products {
+        flex-direction: column;
+    }
+    .about-image, .about-text {
+        padding: 10px;
+    }
+    .product {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+/* Estilos para telas menores ou iguais a 640px (Mobile) */
+@media screen and (max-width: 640px) {
+    .product {
+        width: 100%;
+    }
+}
